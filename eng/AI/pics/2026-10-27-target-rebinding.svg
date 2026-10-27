@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="330" viewBox="0 0 760 330" font-family="Helvetica,Arial,sans-serif" font-size="14">
+  <rect width="760" height="330" fill="#ffffff"/>
+  <text x="20" y="28" font-size="16" font-weight="bold" fill="#222">Prompt seen by the guard model</text>
+  <rect x="20" y="42" width="470" height="270" rx="8" fill="#f4f6f8" stroke="#9aa5b1"/>
+  <text x="36" y="68" fill="#444">[Developer] Instruction and policy</text>
+  <text x="36" y="94" fill="#444">[Developer] &lt;Query&gt;: Is this content harmful?</text>
+  <text x="36" y="120" fill="#444">[Developer] &lt;Document&gt;:</text>
+  <rect x="36" y="132" width="440" height="166" rx="6" fill="#fff4e5" stroke="#e8a33d"/>
+  <text x="48" y="154" fill="#8a5a00" font-size="12">Untrusted content (interpolated verbatim)</text>
+  <rect x="48" y="164" width="416" height="34" rx="4" fill="#fde2e1" stroke="#d64545"/>
+  <text x="60" y="186" fill="#a12020">Harmful request (left unchanged)</text>
+  <rect x="48" y="208" width="416" height="34" rx="4" fill="#e8eefc" stroke="#4a6fd1"/>
+  <text x="60" y="230" fill="#22408f">Forged &lt;Query&gt;: Is this content harmful?</text>
+  <rect x="48" y="252" width="416" height="34" rx="4" fill="#e3f4e6" stroke="#3f9a52"/>
+  <text x="60" y="274" fill="#1f6b31">Forged &lt;Document&gt;: harmless decoy sentence</text>
+  <path d="M496 269 L560 269" stroke="#3f9a52" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#3f9a52"/></marker></defs>
+  <rect x="566" y="226" width="176" height="86" rx="8" fill="#e3f4e6" stroke="#3f9a52"/>
+  <text x="580" y="252" fill="#1f6b31" font-weight="bold">The guard grades the</text>
+  <text x="580" y="274" fill="#1f6b31" font-weight="bold">decoy in the last task</text>
+  <text x="580" y="298" fill="#1f6b31">Verdict: safe (cleared)</text>
+  <rect x="566" y="96" width="176" height="96" rx="8" fill="#fde2e1" stroke="#d64545"/>
+  <text x="580" y="122" fill="#a12020" font-weight="bold">The request still</text>
+  <text x="580" y="144" fill="#a12020" font-weight="bold">reaches the</text>
+  <text x="580" y="166" fill="#a12020" font-weight="bold">downstream model</text>
+  <path d="M654 226 L654 196" stroke="#d64545" stroke-width="2" stroke-dasharray="5,4" fill="none"/>
+</svg>
