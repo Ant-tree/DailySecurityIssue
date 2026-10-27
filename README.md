@@ -1,62 +1,62 @@
 # DailySecurityIssue
 
-[English](README.en.md)
+[한국어](README.ko.md)
 
-매일 새로 공개되는 보안 분야 논문을 모아 정해진 형식으로 요약하는 아카이브입니다. 모바일 보안, AI 보안, 난독화를 중심으로 보고, 그 밖에 눈여겨볼 만한 논문도 함께 정리합니다.
+An archive of security research papers, collected every day and summarized in a fixed format. The focus is on mobile security, AI security, and obfuscation, with other noteworthy papers included as well.
 
-## 디렉터리 구조
+## Layout
 
-같은 내용을 한국어와 영어 두 벌로 기록합니다. 기준 언어는 한국어이며, 영어본은 한국어본과 같은 논문을 같은 순서로 담습니다.
+Every entry is written twice, once in Korean and once in English. Korean is the primary language; the English version covers the same papers in the same order.
 
 ```
-ko/                한국어본
+ko/                Korean
   Mobile/
   AI/
   Obfuscation/
   Etc/
-eng/               영어본 (구조는 ko/ 와 동일)
+eng/               English (same layout as ko/)
 ```
 
-- 파일 이름은 조사한 날짜(한국 시간 기준)를 따릅니다. 예: `ko/Mobile/2026-10-27.md`
-- 그날 해당 카테고리에 실을 논문이 없으면 파일을 만들지 않습니다.
-- 문서에 들어가는 그림은 SVG로 만들어 각 카테고리의 `pics/` 아래에 둡니다.
+- Files are named after the date of collection in Korea Standard Time, for example `eng/Mobile/2026-10-27.md`.
+- If a category has no papers on a given day, no file is created for it.
+- Figures are drawn as SVG and stored under `pics/` in each category directory.
 
-## 분류
+## Categories
 
-| 디렉터리 | 다루는 내용 |
+| Directory | Scope |
 | --- | --- |
-| `Mobile` | 모바일 보안 전반. 파일 안에서 다시 악성코드 및 분석, MTD와 디셉션, 온디바이스 LLM, 프라이버시, TEE와 사이드 채널, 그 외로 나눕니다. |
-| `AI` | AI 모델과 AI 기반 시스템에서 생기는 보안 문제 |
-| `Obfuscation` | 코드 난독화와 역난독화 |
-| `Etc` | 위 분류에 들지 않지만 특기할 만한 논문 |
+| `Mobile` | Mobile security in general. Each file is further divided into malware and analysis, moving target defense and deception, on-device LLMs, privacy, TEEs and side channels, and other topics. |
+| `AI` | Security problems in AI models and AI-based systems |
+| `Obfuscation` | Code obfuscation and deobfuscation |
+| `Etc` | Notable papers that do not fit the categories above |
 
-## 논문 정리 형식
+## Entry format
 
 ```markdown
-# 논문 제목
-> 게재처 (저널, 학회 또는 프리프린트 여부)
-> 게재 연도
-Abstract 및 요약, 원문 링크
+# Paper title
+> Venue (journal, conference, or preprint)
+> Year
+Abstract, summary, and link to the paper
 ### Contribution
-기여한 내용과 장점
+What the paper contributes and where it is strong
 ### Evaluation
-실제로 평가한 지표, 데이터셋과 비교 대상, 지표의 신빙성
+Metrics actually measured, datasets and baselines, and how far the numbers can be trusted
 #### Comment
-이 논문만의 특이 사항, 한계, 게재처의 신뢰도
+What sets the paper apart, its limitations, and how reputable the venue is
 ```
 
-## 수집 기준
+## Selection criteria
 
-- 주요 보안 학회와 저널(IEEE S&P, USENIX Security, ACM CCS, NDSS, IEEE TDSC, IEEE TIFS 등), 모바일 시스템 학회, arXiv cs.CR, IACR ePrint를 중심으로 살펴봅니다.
-- 약탈적 저널이나 심사 과정이 불분명한 게재처의 논문은 싣지 않습니다.
-- 심사를 거치지 않은 프리프린트는 실을 수 있지만, 게재처 항목에 그 사실을 반드시 밝힙니다.
-- 중국 기관의 논문은 게재처의 색인 여부, 저자와 소속의 실재성, 재현 가능성, 평가의 타당성을 한 번 더 확인하고, 그 결과를 Comment에 적습니다. 확인이 충분하지 않으면 싣지 않습니다.
-- 이미 이전 날짜에 정리한 논문은 다시 싣지 않습니다.
+- The main sources are top security conferences and journals (IEEE S&P, USENIX Security, ACM CCS, NDSS, IEEE TDSC, IEEE TIFS, and others), mobile systems conferences, arXiv cs.CR, and the IACR ePrint archive.
+- Papers from predatory journals or venues with unclear review processes are left out.
+- Preprints that have not been peer reviewed may be included, but this is always stated in the venue line.
+- Papers from Chinese institutions get an extra round of checks: whether the venue is actually indexed, whether the authors and affiliations are real, whether the work can be reproduced, and whether the evaluation holds up. The findings are noted in the Comment section, and papers that cannot be adequately verified are excluded.
+- Papers already covered on an earlier date are not repeated.
 
-## 갱신 주기
+## Update schedule
 
-매일 오전(한국 시간)에 전날부터 새로 공개된 논문을 반영합니다. 커밋 메시지에는 조사 날짜가 들어갑니다.
+New papers are added every morning (Korea Standard Time). Each commit message includes the collection date.
 
-## 유의 사항
+## Disclaimer
 
-요약과 평가는 논문 원문을 읽고 작성하지만, 해석에는 오류가 있을 수 있습니다. 인용하거나 판단의 근거로 쓸 때는 반드시 원문을 확인해 주세요.
+Summaries and assessments are written after reading the papers themselves, but they may still contain errors of interpretation. Please check the original paper before citing it or relying on it.
