@@ -1,5 +1,4 @@
 # Pending candidates
 
 Candidates whose full text could not be read yet. One line per paper: arXiv ID | title | category | first listed | sources tried
-2611.09113 | Authorization Drift in LLM Agents: Evaluating Boundary Compliance in Multi-Step Tool Use | AI | 2026-11-09 | arXiv PDF downloaded on user's computer; Chinese-institution verification (affiliations, code at github.com/ZJR-FZD/AgentDrift) not completed in this run
-2611.08768 | Conflux: Preventing Privilege Escalation with Principal Contexts and System-Level Evaluation | AI | 2026-11-09 | arXiv list only; full text not requested (arXiv download cap reached)
+IACR ePrint 2026/2760 | Syndrome Decoding out of the Head: Structure-Aided Side-Channel Witness Recovery on SDitH | Etc | 2026-11-10 | title search (extended); ePrint PDF returned HTTP 403 from both cloud and user's computer; ePrint is not peer reviewed, so no abstract-only summary
